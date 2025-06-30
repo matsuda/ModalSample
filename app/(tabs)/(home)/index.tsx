@@ -1,5 +1,5 @@
-import { Link } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
+import { Link } from "expo-router";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function HomeScreen() {
   return (
@@ -14,6 +14,12 @@ export default function HomeScreen() {
         }}>
         View user details
       </Link> */}
+      <Link href="/modal" style={styles.link}>
+        Open modal
+      </Link>
+      <Link href="/modal-with-stack" style={styles.link}>
+        Open modal (Stack)
+      </Link>
     </View>
   );
 }
@@ -21,7 +27,11 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  link: {
+    paddingTop: 20,
+    fontSize: 20,
   },
 });
